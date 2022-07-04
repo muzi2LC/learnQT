@@ -1,4 +1,4 @@
-﻿#ifndef MYWIDGET_H
+#ifndef MYWIDGET_H
 #define MYWIDGET_H
 
 #include <QWidget>
@@ -14,9 +14,6 @@ class MyWidget : public QWidget
 public:
     MyWidget(QWidget *parent = nullptr);
     ~MyWidget();
-
-private slots:
-    void on_pushButton_toggled(bool checked);
 
 private:
     Ui::MyWidget *ui;

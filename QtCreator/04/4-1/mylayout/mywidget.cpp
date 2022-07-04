@@ -18,6 +18,7 @@ MyWidget::MyWidget(QWidget *parent)
 //    layout->setSpacing(50);
 //    layout->setContentsMargins(0,0,50,100);
 //    setLayout(layout);
+    ui->textEdit->hide();
 
 
 }
@@ -27,3 +28,10 @@ MyWidget::~MyWidget()
     delete ui;
 }
 
+
+void MyWidget::on_pushButton_toggled(bool checked)
+{
+    ui->textEdit->setVisible(checked);
+    if(checked) ui->pushButton->setText(tr("隐藏可扩展窗口"));
+    else ui->pushButton->setText(tr("显示可扩展窗口"));
+}
